@@ -6,7 +6,7 @@
 这里进行消息头设置由  Accept: 'application/json'修改成  Accept: 'json',
 ##### 效果图如下
 
-![首页](F:\project\TaroProject\douBan_taro-dev\首页.png)
+![首页](https://github.com/jingdomaaa/douban-taro-dev/blob/master/%E9%A6%96%E9%A1%B5.png?raw=true)
 
 ![搜索](https://github.com/jingdomaaa/douban-taro-dev/blob/master/%E6%90%9C%E7%B4%A2.png?raw=true)
 
