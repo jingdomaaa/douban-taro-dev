@@ -8,6 +8,6 @@
 
 ![首页](F:\project\TaroProject\douBan_taro-dev\首页.png)
 
-![搜索](F:\project\TaroProject\douBan_taro-dev\搜索.png)
+![搜索](https://github.com/jingdomaaa/douban-taro-dev/blob/master/%E6%90%9C%E7%B4%A2.png?raw=true)
 
 ![详情](F:\project\TaroProject\douBan_taro-dev\详情.png)
