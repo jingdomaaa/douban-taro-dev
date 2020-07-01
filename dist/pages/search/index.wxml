@@ -1,0 +1,21 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="container">
+        <view class="top">
+            <input class="input" bindinput="onInput" placeholder="电影/导演/演员" />
+        </view>
+        <view class="content">
+            <block wx:if="{{list}}">
+                <view class="list" wx:key="i" wx:for="{{list}}" wx:for-item="v" wx:for-index="i">
+                    <view class="pic">
+                        <image class="pics" mode="aspectFill" src="{{v.images.small}}"></image>
+                    </view>
+                    <view class="middle">
+                        <view class="title">{{v.title}}</view>
+                        <view class="texts">评分:{{v.rating.average}}</view>
+                        <view class="texts">导演:{{v.directors[0].name}}</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</block>

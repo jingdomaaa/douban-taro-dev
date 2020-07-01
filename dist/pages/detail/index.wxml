@@ -1,0 +1,48 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="container">
+        <view class="top">
+            <view class="image_wrap">
+                <image mode="aspectFill" class="image_big" src="{{obj.images.medium}}"></image>
+            </view>
+        </view>
+        <view class="middle">
+            <view class="middle_top">
+                <view class="title_desc">{{obj.title}}</view>
+                <view class="des">{{obj.original_title}}</view>
+                <view class="descriptions">
+                    <view class="lefts">
+                        <view class="des_left">2018-11-09</view>
+                        <view class="des_left">片长：{{obj.durations[0]}}</view>
+                    </view>
+                    <view class="rights">更多操作</view>
+                </view>
+            </view>
+            <view class="middle_mid">
+                <view class="jianjie">简介</view>
+                <view class="jianjie_desc">{{obj.summary}}</view>
+                <view class="jianjie">影人</view>
+                <scroll-view scroll-x="{{true}}" class="photo_wraps">
+                    <block wx:if="{{obj.casts}}">
+                        <image wx:key="index" mode="aspectFill" class="photo" src="{{item.avatars.small}}" wx:for="{{obj.casts}}" wx:for-item="item" wx:for-index="index"></image>
+                    </block>
+                </scroll-view>
+            </view>
+        </view>
+        <view class="bottom">
+            <view class="title_b">短评</view>
+            <view class="bottom_wrap">
+                <block wx:if="{{obj.popular_comments}}">
+                    <view class="item" wx:key="i" wx:for="{{obj.popular_comments}}" wx:for-item="v" wx:for-index="i">
+                        <view class="item_left">
+                            <image mode="aspectFill" class="pic" src="{{v.author.avatar}}"></image>
+                        </view>
+                        <view class="item_right">
+                            <view class="name">{{v.author.name}} 评分{{v.rating.max}}</view>
+                            <view class="deatil">{{v.content}}</view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+</block>

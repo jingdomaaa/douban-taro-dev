@@ -1,0 +1,33 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="container">
+        <view class="top">
+            <swiper autoplay="{{true}}" duration="{{500}}" circular="{{true}}" class="swipers" indicator-dots="{{true}}" indicator-color="yellowgreen">
+                <block wx:if="{{list.length}}">
+                    <swiper-item wx:key="index" class="swiper_item" bindtap="goto" wx:for="{{list}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{item.id}}">
+                        <view class="big_image_wrap">
+                            <image mode="aspectFill" class="big_image" src="{{item.images.small}}"></image>
+                            <view class="big_title">{{item.title}}</view>
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+        <view class="content">
+            <block wx:if="{{list.length}}">
+                <view class="list" wx:key="index" bindtap="goto" wx:for="{{list}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{item.id}}">
+                    <view class="imag_wrap">
+                        <image mode="aspectFill" class="pic" src="{{item.images.small}}"></image><text class="vip_logo">VIP</text><text class="average">{{item.rating.average}}</text>
+                    </view>
+                    <view class="description">
+                        <view class="title">{{item.title}}</view>
+                        <view class="types">
+                            <block wx:if="{{item.genres}}">
+                                <view class="type" wx:key="v" wx:for="{{item.genres}}" wx:for-item="i" wx:for-index="v">{{i}}</view>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</block>
